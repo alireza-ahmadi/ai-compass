@@ -1,42 +1,47 @@
-# sv
+# ai compass
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+a 2x2 quadrant chart for placing yourself on the ai discourse, based on
+[noah smith's compass](https://x.com/Noahpinion/status/2041462156936528339).
+click anywhere to mark your position, share via url, download as png.
 
-## Creating a project
+live: <https://ai-compass.alireza.es>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## stack
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- sveltekit 2 + svelte 5 (runes)
+- tailwind v4
+- cloudflare pages (`@sveltejs/adapter-cloudflare`)
+- bun
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-bun x sv@0.14.1 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:none" sveltekit-adapter="adapter:cloudflare+cfTarget:pages" mcp="ide:claude-code+setup:remote" devtools-json --install bun ai-compass
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## develop
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun install
+bun run dev
 ```
 
-## Building
-
-To create a production version of your app:
+## build & preview
 
 ```sh
-npm run build
+bun run build
+bun run preview   # wrangler pages dev .svelte-kit/cloudflare
 ```
 
-You can preview the production build with `npm run preview`.
+## deploy (cloudflare pages)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+bun run build
+bunx wrangler pages deploy .svelte-kit/cloudflare --project-name=ai-compass
+```
+
+or connect the repo on the cloudflare pages dashboard with build command
+`bun run build` and output dir `.svelte-kit/cloudflare`.
+
+## scripts
+
+- `bun run dev` — vite dev server
+- `bun run build` — production build (prerendered)
+- `bun run preview` — local cloudflare pages preview via wrangler
+- `bun run check` — svelte-check + tsc
+- `bun run lint` — prettier + eslint
+- `bun run format` — prettier --write
