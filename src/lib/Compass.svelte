@@ -209,4 +209,17 @@
 			</text>
 		</g>
 	{/if}
+
+	<!-- watermark -->
+	<text
+		x={CHART.x}
+		y={VB_H - 18}
+		text-anchor="start"
+		font-size="16"
+		font-weight="300"
+		fill="#111"
+		opacity="0.15"
+	>
+		ai-compass.alireza.es
+	</text>
 </svg>
