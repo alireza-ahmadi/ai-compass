@@ -58,7 +58,7 @@
 		class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4"
 	>
 		<div
-			class="pointer-events-auto w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl"
+			class="pointer-events-auto w-full max-w-md bg-white p-6 shadow-2xl"
 			style="font-family: 'Google Sans', system-ui, sans-serif;"
 		>
 			<div class="mb-4 flex items-start justify-between gap-4">
@@ -96,13 +96,13 @@
 					type="text"
 					readonly
 					value={shareUrl}
-					class="flex-1 rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-gray-800 focus:border-gray-500 focus:outline-none"
+					class="flex-1 border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-gray-800 focus:border-gray-500 focus:outline-none"
 					onclick={(e) => (e.currentTarget as HTMLInputElement).select()}
 				/>
 				<button
 					type="button"
 					onclick={copy}
-					class="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
+					class="bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
 				>
 					{copied ? 'copied!' : 'copy'}
 				</button>
@@ -112,14 +112,14 @@
 				<button
 					type="button"
 					onclick={onDownload}
-					class="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-100"
+					class="flex-1 border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-100"
 				>
 					download png
 				</button>
 				<button
 					type="button"
 					onclick={onChangePosition}
-					class="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-100"
+					class="flex-1 border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-100"
 				>
 					change position
 				</button>
