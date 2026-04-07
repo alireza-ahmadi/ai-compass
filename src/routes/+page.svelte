@@ -62,7 +62,7 @@
 
 	const TITLE = 'AI Compass';
 	const DESCRIPTION = 'Where do you stand on AI? Place yourself on the compass and share.';
-	const OG_IMAGE = '/og-image.png';
+	const OG_IMAGE = 'https://ai-compass.alireza.es/og-image-v1.png';
 </script>
 
 <svelte:head>
